@@ -24,20 +24,22 @@ export default function EnhancedHeader({ currentRouteName }) {
           },
         }}
         containerStyle={{
-          backgroundColor: "rgba(100,100,100,1)", //"rgba(0,0,0,0.7)",
+          backgroundColor: "rgba(100,100,100,1)",
           borderBottomColor: "#000",
         }}
         rightComponent={
-          <Switch
-            trackColor={{
-              false: "rgba(255,255,255,0.2)",
-              true: "rgba(255,255,255,0.2)",
-            }}
-            thumbColor={theme.value ? "#f4f3f4" : "#f4f3f4"}
-            ios_backgroundColor="rgba(255,255,255,0.2)"
-            value={theme.value}
-            onValueChange={theme.onValueChange}
-          />
+          currentRouteName === "Map" && (
+            <Switch
+              trackColor={{
+                false: "rgba(255,255,255,0.2)",
+                true: "rgba(255,255,255,0.2)",
+              }}
+              thumbColor={theme.value ? "#f4f3f4" : "#f4f3f4"}
+              ios_backgroundColor="rgba(255,255,255,0.2)"
+              value={theme.value}
+              onValueChange={theme.onValueChange}
+            />
+          )
         }
       />
     </View>
