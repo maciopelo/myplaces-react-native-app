@@ -9,9 +9,6 @@ import { View, StyleSheet, ScrollView, Dimensions, Text } from "react-native";
 
 const screen = Dimensions.get("screen");
 
-
-
-
 function AddPlaces() {
   const scrollRef = useRef(null);
   const [shouldSlide, setShouldSlide] = useState(false);
@@ -19,7 +16,7 @@ function AddPlaces() {
 
   const chosenPlaceTextComponent = memory.place.value !== null && (
     <View style={styles.placeTextContainer}>
-      <View style={{ backgroundColor: "white" }}>
+      <View style={{ backgroundColor: "transparent" }}>
         <Text style={{ fontSize: 18 }}>
           {memory.place.value.name} -
           <Text style={{ fontWeight: "bold" }}>
@@ -52,7 +49,7 @@ function AddPlaces() {
     <View>
       <ScrollView
         ref={scrollRef}
-        contentContainerStyle={{ backgroundColor: "#fff" }}
+        contentContainerStyle={{ backgroundColor: "rgba(120,120,120,0.2)" }}
         scrollEnabled={true}
       >
         <SearchPlacesInput place={memory.place} />
@@ -66,7 +63,7 @@ function AddPlaces() {
         <View
           style={{
             height: Math.round(screen.height / 2),
-            backgroundColor: "#fff",
+            backgroundColor: "transparent",
           }}
         />
       </ScrollView>
@@ -78,7 +75,7 @@ export default AddPlaces;
 
 const styles = StyleSheet.create({
   placeTextContainer: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     alignItems: "center",
     position: "relative",
   },

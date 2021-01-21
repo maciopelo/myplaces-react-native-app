@@ -96,8 +96,8 @@ const MyImagePicker = ({ image }) => {
       <TouchableOpacity onPress={chosenImage == null ? handleImagePick : null}>
         <View style={chosenImage !== null && styles.image}>
           <Image
-            source={actualImage}
-            // source={chosenImage == null ? actualImage : { uri: chosenImage }}
+            //source={actualImage}
+            source={chosenImage == null ? actualImage : { uri: chosenImage }}
             style={{
               width: 180,
               height: 180,
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 5,
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     paddingBottom: 15,
     position: "relative",
   },

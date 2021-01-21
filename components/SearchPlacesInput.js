@@ -135,13 +135,13 @@ function SearchPlacesInput({ place }) {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     alignItems: "center",
   },
 
   innerContainer: {
     width: "80%",
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     marginTop: 20,
     position: "relative",
     alignItems: "center",
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 50,
     borderTopLeftRadius: 50,
     borderRadius: 50,
-    backgroundColor: "#E0CEEA",
+    backgroundColor: "rgba(255,255,255,0.8)",
     height: 45,
     shadowColor: "gray",
     shadowOffset: {

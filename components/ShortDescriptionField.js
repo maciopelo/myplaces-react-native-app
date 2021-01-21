@@ -37,7 +37,7 @@ export default ShortDescriptionField;
 const styles = StyleSheet.create({
   container: {
     marginTop: screen.height > 680 ? 50 : 25,
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     alignItems: "center",
   },
   descriptionView: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     height: 120,
     width: "100%",
     borderColor: "black",
-    backgroundColor: "#E0CEEA",
+    backgroundColor: "rgba(255,255,255,0.8)",
     borderWidth: 1,
     padding: 10,
     paddingTop: 8,

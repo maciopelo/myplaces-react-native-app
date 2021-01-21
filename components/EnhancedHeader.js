@@ -29,9 +29,12 @@ export default function EnhancedHeader({ currentRouteName }) {
         }}
         rightComponent={
           <Switch
-            trackColor={{ false: "#E0CEEA", true: "#81b0ff" }}
+            trackColor={{
+              false: "rgba(255,255,255,0.2)",
+              true: "rgba(255,255,255,0.2)",
+            }}
             thumbColor={theme.value ? "#f4f3f4" : "#f4f3f4"}
-            ios_backgroundColor="#E0CEEA"
+            ios_backgroundColor="rgba(255,255,255,0.2)"
             value={theme.value}
             onValueChange={theme.onValueChange}
           />
